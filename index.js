@@ -3,12 +3,12 @@ const { Client, Collection, MessageEmbed,MessageAttachment } = require(`discord.
 const { readdirSync } = require(`fs`);
 const { join } = require(`path`);
 const db = require('quick.db');
-const { keep_alive } = require("./keep_alive");
 const { TOKEN, PREFIX, AVATARURL, BOTNAME, } = require(`./config.json`);
 const figlet = require("figlet");
 const client = new Client({ disableMentions: `` , partials: ['MESSAGE', 'CHANNEL', 'REACTION'] });
 client.login('Nzk0OTAxNjMyNzg5MzgxMTUx.X_Bj1Q.pz2uhdBSYZzdyAALKdCUxUI74cQ');
 client.commands = new Collection();
+client.setMaxListeners(0);
 client.prefix = PREFIX;
 client.queue = new Map();
 const cooldowns = new Collection();
@@ -16,7 +16,9 @@ const escapeRegex = (str) => str.replace(/[.*+?^${}()|[\]\\]/g, `\\$&`);
 
 //this fires when the BOT STARTS DO NOT TOUCH
 client.on(`ready`, () => {	
+//////////////
 
+////////
    
    ///////////////////////////////
     ////////////IFCHEMPTY//////////
@@ -35,8 +37,7 @@ client.on(`ready`, () => {
       });
       
 
-      client.user.setActivity(`${PREFIX}help | ${client.guilds.cache.size} Server`, { type: "STREAMING",
-      url: "https://www.twitch.tv/nocopyrightsounds"});
+    client.user.setActivity(`Type: ${PREFIX}help | ${client.guilds.cache.size} Server,Users ${client.guilds.cache.reduce((a, g) => a + g.memberCount, 0)},`, { type: "PLAYING"});
    
   
       }, (5000));
@@ -53,10 +54,6 @@ client.on(`ready`, () => {
     })
    
 });
-//DO NOT TOUCH
-client.on(`warn`, (info) => console.log(info));
-//DO NOT TOUCH
-client.on(`error`, console.error);
 //DO NOT TOUCH
 //FOLDERS:
 //Admin custommsg data FUN General Music NSFW others
@@ -81,23 +78,51 @@ client.on(`message`, async (message) => {
 
   //information message when the bot has been tagged
   if(message.content.includes(client.user.id)) {
-    message.reply(new Discord.MessageEmbed().setColor("#F0EAD6").setAuthor(`${message.author.username}, My Prefix is ${prefix}, to get started; type ${prefix}help`, message.author.displayAvatarURL({dynamic:true})));
+    message.reply(new Discord.MessageEmbed().setColor("#c219d8").setAuthor(`${message.author.username}, My Prefix is ${prefix}, to get started; type ${prefix}help`, message.author.displayAvatarURL({dynamic:true})));
   } 
   //An embed announcement for everyone but no one knows so fine ^w^
-  if(message.content.startsWith(`${prefix}embed`)){
+  if(message.content.startsWith(`${prefix}hel`)){
     //define saymsg
     const saymsg = message.content.slice(Number(prefix.length) + 5)
     //define embed
     const embed = new Discord.MessageEmbed()
-    .setColor("#F0EAD6")
-    .setDescription(saymsg)
-    .setFooter("Harmony", client.user.displayAvatarURL())
+    .setColor("RANDOM")
+    .setThumbnail(message.author.avatarURL({dynamic: "true"}))
+      .setAuthor("Help Commands!","https://cdn.discordapp.com/emojis/775437938142085170.gif?v=1&size=64")
+    .setImage('https://cdn.discordapp.com/attachments/788540660696481795/789349745268752414/tenor.gif')
+    .setFooter(`Requested by: ${message.author.username}#${message.author.discriminator}`, message.member.user.displayAvatarURL({ dynamic: true }))
+
+    .setDescription(`\`≪  Prefix Bot ${PREFIX}  ≫
+
+Filter Commands
+- ${PREFIX}fi bassboost - ${PREFIX}fi 8D
+- ${PREFIX}fi vaporwave - ${PREFIX}fi nightcore 
+- ${PREFIX}fi phaser    - ${PREFIX}fi tremolo 
+- ${PREFIX}fi vibrato   - ${PREFIX}fi surrounding 
+- ${PREFIX}fi pulsator 
+- ${PREFIX}fi clear --- removes all filters
+Music
+- ${PREFIX}loop(l)-${PREFIX}lyrics(ly)
+- ${PREFIX}np(current)-${PREFIX}pause(pe)
+- ${PREFIX}-play(p)-${PREFIX}queue(qu)
+- ${PREFIX}radio(ro)-${PREFIX}remove(delete) 
+- ${PREFIX}resume(r)${PREFIX}search(find)
+- ${PREFIX}shuffle(mix)${PREFIX}-skip(s)
+- ${PREFIX}skipto(st)-${PREFIX}stop(sp)
+- ${PREFIX}volume(v)
+
+Others
+- ${PREFIX}help - ${PREFIX}ping
+- ${PREFIX}prefix -${PREFIX}uptime
+\`
+**[   SUPPORT  ](https://discord.gg/robot)** -  [   INVITE   ](https://discord.com/api/oauth2/authorize?client_id=681874861441810453&permissions=8&scope=bot)  -  [   WEBSITE   ](https://confusion-zesty-tadpole.glitch.me)`)
+
     //delete the Command
-    message.delete({timeout: 300})
+  //////  message.delete({timeout: 300})
     //send the Message
     message.channel.send(embed)
   }
-
+ 
 
 //command Handler DO NOT TOUCH
  const prefixRegex = new RegExp(`^(<@!?${client.user.id}>|${escapeRegex(prefix)})\\s*`);
@@ -120,8 +145,8 @@ client.on(`message`, async (message) => {
    if (now < expirationTime) {
      const timeLeft = (expirationTime - now) / 1000;
      return message.reply(
-      new MessageEmbed().setColor("#F0EAD6")
-      .setTitle(`:x: Please wait \`${timeLeft.toFixed(1)} seconds\` before reusing the \`${prefix}${command.name}\`!`)    
+      new MessageEmbed().setColor("#c219d8")
+      .setTitle(`<:no:770326304473350145> Please wait \`${timeLeft.toFixed(1)} seconds\` before reusing the \`${prefix}${command.name}\`!`)    
      );
    }
  }
@@ -131,8 +156,8 @@ client.on(`message`, async (message) => {
    command.execute(message, args, client);
  } catch (error) {
    console.error(error);
-   message.reply( new MessageEmbed().setColor("#F0EAD6")
-   .setTitle(`:x: There was an error executing that command.`)).catch(console.error);
+   message.reply( new MessageEmbed().setColor("#c219d8")
+   .setTitle(`<:no:770326304473350145> There was an error executing that command.`)).catch(console.error);
  }
 
 
@@ -143,3 +168,87 @@ function delay(delayInms) {
      resolve(2);
    }, delayInms);
  });
+}
+//////////////
+client.on("message", message => {
+  if (message.author.bot) return;
+  if (!message.content.startsWith(PREFIX)) return;
+  let command = message.content.split(" ")[0];
+  command = command.slice(PREFIX.length);
+  let args = message.content.split(" ").slice(1);
+  if (command == "say") {
+    if (!message.member.hasPermission("ADMINISTRATOR"))
+      return message.channel.send(
+        "ADMINISTRATOR ليس لديك صلاحيات rolling_eyes"
+      );
+    message.channel.send("" + args.join(" "));
+    message.delete();
+  }
+});
+//////////
+client.on("message", message => {
+  if (message.content.toLowerCase() === PREFIX + "roles") {
+    let roles = message.guild.roles.cache
+      .map(r => `[ ${r.name}  - Color ${r.color} ]`)
+      .join("\n");
+    let embed = new Discord.MessageEmbed()
+      .setTitle("Server Roles")
+      .setDescription(" ```javascript\n" + roles + "``` ");
+    message.channel.send(embed);
+  }
+  if (message.content.toLowerCase() === PREFIX + "help roles") {
+    let roles = new Discord.MessageEmbed()
+      .setTitle(`Command: roles `)
+      .addField("Usage", `${PREFIX}roles`)
+      .addField("Information", "Show All Roles For Server");
+    message.channel.send(roles);
+  }
+});
+/////////
+client.on("message", async message => {
+  let command = message.content.toLowerCase().split(" ")[0];
+  command = command.slice(PREFIX.length);
+  if (command == "avatar") {
+    let args = message.content.split(" ");
+    let user =
+      message.mentions.users.first() ||
+      message.author ||
+      message.guild.member.cache.get(args[1]);
+    message.channel.send(
+      new Discord.MessageEmbed()
+        .setAuthor(user.username)
+        .setDescription(`**[Avatar Link](${user.avatarURL()})**`)
+        .setImage(user.avatarURL({ dynamic: true, format: "png", size: 1024 }))
+    );
+  }
+});
+///////
+client.on("message", async message => {
+  if (message.content.startsWith(PREFIX + "lock")) {
+    if (!message.channel.guild)
+      return message.channel.send(
+        "ghallat" + "** | Sorry This Command Only For Servers .**"
+      );
+
+    if (!message.member.hasPermission("MANAGE_CHANNELS")) return;
+    if (!message.guild.member(client.user).hasPermission("MANAGE_CHANNELS"))
+      return;
+    message.channel.updateOverwrite(message.guild.id, {
+      SEND_MESSAGES: false
+    });
+    const lock = new Discord.MessageEmbed()
+      .setColor("RANDOM")
+      .setDescription(
+        `<a:emoji_3:784873566428332033>| Locked Channel
+Channel Name : <#${message.channel.id}>
+Locked By : <@${message.author.id}>
+`
+      )
+       .setThumbnail(message.author.avatarURL({dynamic: "true"}))
+      .setAuthor(message.author.username, message.author.displayAvatarURL)
+    message.channel.send(lock);
+  }
+});
+
+
+//Bot coded by Tomato#6966 
