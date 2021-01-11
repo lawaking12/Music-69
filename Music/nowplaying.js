@@ -44,8 +44,8 @@ execute(message) {
     const left = ms - seek;
     //define embed
     let nowPlaying = new MessageEmbed()
-          .setAuthor('♪Now playing♪','https://cdn.discordapp.com/attachments/778600026280558617/781024479623118878/ezgif.com-gif-maker_1.gif','https://harmonymusic.tk')
-          .setDescription(`[**${song.title}**](${song.url})`)
+          .setAuthor('♪Now playing♪','https://cdn.discordapp.com/avatars/755768592104030208/140d4df0220254788b43497306721ca3.png?size=1024','https://harmonymusic.tk')
+          .setDescription(`[${song.title}](${song.url})`)
           .setThumbnail(song.thumbnail.url)
           .setColor("#F0EAD6")
           .setFooter(`Requested by: ${message.author.username}#${message.author.discriminator}`, message.member.user.displayAvatarURL({ dynamic: true }))
