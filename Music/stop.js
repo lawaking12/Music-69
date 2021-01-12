@@ -11,7 +11,7 @@ const { approveemoji,  denyemoji,  PREFIX,} = require(`../config.json`);
 module.exports = {
   name: "stop",
   description: "Stops the music",
-  aliases: ["leave", "end"],
+  aliases: ["s", "S"],
   cooldown: 5,
   edesc: `Type the Command, to stop playing and leave the channel.\nUsage: ${PREFIX}stop`,
 
