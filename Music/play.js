@@ -82,14 +82,9 @@ async execute(message, args, client) {
       } else {
         //If nothing is playing join the channel
         queueConstruct.connection = await channel.join();
-        //send join message
-        message.channel.send(new MessageEmbed().setColor("#F0EAD6")
-          .setDescription(`**👍 Joined \`${channel.name}\` 📄 bound \`#${message.channel.name}\`**`)
-          .setFooter(`By: ${message.author.username}#${message.author.discriminator}`))
-        //if its an url
         if (urlValid) { //send searching link
           message.channel.send(new MessageEmbed().setColor("#F0EAD6")
-            .setDescription(`**:notes: Searching 🔍 [\`LINK\`](${args.join(" ")})**`))
+            .setDescription(`**:notes: Searching 🔍 [\LINK\](${args.join(" ")})**`))
           //if not 
         }
         else { //send searching TITLE
