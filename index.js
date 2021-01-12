@@ -91,6 +91,7 @@ client.on(`message`, async (message) => {
     .setThumbnail(message.author.avatarURL({dynamic: "true"}))
       .setAuthor("Help Commands!","https://cdn.discordapp.com/emojis/775437938142085170.gif?v=1&size=64")
     .setImage('https://cdn.discordapp.com/attachments/788540660696481795/789364251512668190/ab45bb4451536652faca51ae4f42d5dd.gif')
+    .setTitle("NEW UPDATE")
     .setFooter(`Requested by: ${message.author.username}#${message.author.discriminator}`, message.member.user.displayAvatarURL({ dynamic: true }))
 
     .setDescription(`\`≪  Prefix Bot ${PREFIX}  ≫
