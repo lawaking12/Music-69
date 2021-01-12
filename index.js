@@ -81,7 +81,7 @@ client.on(`message`, async (message) => {
     message.reply(new Discord.MessageEmbed().setColor("#c219d8").setAuthor(`${message.author.username}, My Prefix is ${prefix}, to get started; type ${prefix}help`, message.author.displayAvatarURL({dynamic:true})));
   } 
   //An embed announcement for everyone but no one knows so fine ^w^
-  if(message.content.startsWith(`${prefix}hel`)){
+  if(message.content.startsWith(`${prefix}help`)){
     //define saymsg
     const saymsg = message.content.slice(Number(prefix.length) + 5)
     //define embed
@@ -91,6 +91,7 @@ client.on(`message`, async (message) => {
     .setThumbnail(message.author.avatarURL({dynamic: "true"}))
       .setAuthor("Help Commands!","https://cdn.discordapp.com/emojis/775437938142085170.gif?v=1&size=64")
     .setImage('https://cdn.discordapp.com/attachments/788540660696481795/789364251512668190/ab45bb4451536652faca51ae4f42d5dd.gif')
+     message.react("✅");
     .setTitle("NEW UPDATE IN PLAY🎵")
     .setFooter(`Requested by: ${message.author.username}#${message.author.discriminator}`, message.member.user.displayAvatarURL({ dynamic: true }))
 
