@@ -85,11 +85,12 @@ client.on(`message`, async (message) => {
     //define saymsg
     const saymsg = message.content.slice(Number(prefix.length) + 5)
     //define embed
+
     const embed = new Discord.MessageEmbed()
     .setColor("RANDOM")
     .setThumbnail(message.author.avatarURL({dynamic: "true"}))
       .setAuthor("Help Commands!","https://cdn.discordapp.com/emojis/775437938142085170.gif?v=1&size=64")
-    .setImage('https://cdn.discordapp.com/attachments/788540660696481795/789349745268752414/tenor.gif')
+    .setImage('https://cdn.discordapp.com/attachments/788540660696481795/789364251512668190/ab45bb4451536652faca51ae4f42d5dd.gif')
     .setFooter(`Requested by: ${message.author.username}#${message.author.discriminator}`, message.member.user.displayAvatarURL({ dynamic: true }))
 
     .setDescription(`\`≪  Prefix Bot ${PREFIX}  ≫
@@ -115,7 +116,7 @@ Others
 - ${PREFIX}help - ${PREFIX}ping
 - ${PREFIX}prefix -${PREFIX}uptime
 \`
-**[   SUPPORT  ](https://discord.gg/robot)** -  [   INVITE   ](https://discord.com/api/oauth2/authorize?client_id=681874861441810453&permissions=8&scope=bot)  -  [   WEBSITE   ](https://confusion-zesty-tadpole.glitch.me)`)
+**[   SUPPORT  ](https://discord.gg/robot)** -  [   INVITE   ](https://discord.com/api/oauth2/authorize?client_id=755768592104030208&permissions=8&scope=bot) -  [   WEBSITE   ](https://wobbly-petite-barberry.glitch.me)`)
 
     //delete the Command
   //////  message.delete({timeout: 300})
