@@ -12,7 +12,7 @@ const { approveemoji, denyemoji, PREFIX, } = require(`../config.json`);
 module.exports = {
   name: "filter",
   description: "Set Audio - Effects",
-  aliases: ["f"],
+  aliases: ["fi"],
   cooldown: 3,
   edesc: `Type this Command to change the current audio effect - style \nUsage: ${PREFIX}filter <Filtertype>`,
 
