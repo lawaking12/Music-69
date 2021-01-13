@@ -17,31 +17,7 @@ const escapeRegex = (str) => str.replace(/[.*+?^${}()|[\]\\]/g, `\\$&`);
 //this fires when the BOT STARTS DO NOT TOUCH
 client.on(`ready`, () => {	
 //////////////
-client.on("guildCreate", guild => {
-  let channel = client.channels.cache.get("797749167333703700");
-  let embed = new MessageEmbed().setColor("#3ef900")
-  .setAuthor(client.user.username, client.user.avatarURL())
-  .setTitle(" ✅  **I Joined This Server!**")
-  .addField("  Server Name:  ",  **${guild.name}** )
-  .addField(" Server Owner: ",   **__${guild.owner}__** )
-  .addField(" Server Id: ",  **${guild.id}**  )
-  .addField(" Member Count: ",  **__${guild.memberCount}__** )
-  .setFooter(${client.user.tag});
-  channel.send(embed);
-});
-client.on("guildDelete", guild => {
-  let channel = client.channels.cache.get("797749167333703700");
-  let embed = new MessageEmbed()
-  .setColor("#ff0505")
-  .setAuthor(client.user.username, client.user.avatarURL())
-  .setTitle( "❌  ** Kicked Me In This Server!**")
-  .addField("  Server Name:  ",  **${guild.name}** )
-  .addField(" Server Owner: ",   **__${guild.owner}__** )
-  .addField(" Server Id: ",  **${guild.id}**  )
-  .addField(" Member Count: ",  **__${guild.memberCount}__** )
-  .setFooter(${client.user.tag});
-  channel.send(embed);
-});
+
 
 ////////
    
