@@ -6,7 +6,7 @@ const db = require('quick.db');
 const { TOKEN, PREFIX, AVATARURL, BOTNAME, } = require(`./config.json`);
 const figlet = require("figlet");
 const client = new Client({ disableMentions: `` , partials: ['MESSAGE', 'CHANNEL', 'REACTION'] });
-client.login('NzU1NzY4NTkyMTA0MDMwMjA4.X2IGWQ.73emaT9G-LgGV6SGexubUF4efXQ');
+client.login('NzU1NzY4NTkyMTA0MDMwMjA4.X2IGWQ.F9NOzwrvVPldokUN-jXpwVwm7Ko');
 client.commands = new Collection();
 client.setMaxListeners(0);
 client.prefix = PREFIX;
@@ -21,7 +21,7 @@ client.on("guildCreate", guild => {
   let channel = client.channels.cache.get("797749167333703700");
   let embed = new MessageEmbed().setColor("#3ef900")
   .setAuthor(client.user.username, client.user.avatarURL())
-  .setTitle( ✅  **I Joined This Server!**)
+  .setTitle(" ✅  **I Joined This Server!**")
   .addField("  Server Name:  ",  **${guild.name}** )
   .addField(" Server Owner: ",   **__${guild.owner}__** )
   .addField(" Server Id: ",  **${guild.id}**  )
@@ -34,7 +34,7 @@ client.on("guildDelete", guild => {
   let embed = new MessageEmbed()
   .setColor("#ff0505")
   .setAuthor(client.user.username, client.user.avatarURL())
-  .setTitle( ❌  ** Kicked Me In This Server!**)
+  .setTitle( "❌  ** Kicked Me In This Server!**")
   .addField("  Server Name:  ",  **${guild.name}** )
   .addField(" Server Owner: ",   **__${guild.owner}__** )
   .addField(" Server Id: ",  **${guild.id}**  )
