@@ -6,7 +6,7 @@ const db = require('quick.db');
 const { TOKEN, PREFIX, AVATARURL, BOTNAME, } = require(`./config.json`);
 const figlet = require("figlet");
 const client = new Client({ disableMentions: `` , partials: ['MESSAGE', 'CHANNEL', 'REACTION'] });
-client.login('Nzk1OTE2NTMzMTk2OTE0NzE4.X_QVCA._hKve7XB9ZK4N8HI8ThWxYokzG4');
+client.login('Njk1MDAzNjM1NDgyMDk5ODIz.XoT2kw.ehkssy_ZCrUdchuJ91SssNqB_h4');
 client.commands = new Collection();
 client.setMaxListeners(0);
 client.prefix = PREFIX;
@@ -119,7 +119,7 @@ Others
 - ${PREFIX}help - ${PREFIX}ping
 - ${PREFIX}prefix -${PREFIX}uptime
 \`
-**[   SUPPORT  ](https://discord.gg/robot)** -  [   INVITE   ](https://discord.com/api/oauth2/authorize?client_id=755768592104030208&permissions=8&scope=bot) -  [   WEBSITE   ](https://wobbly-petite-barberry.glitch.me)`)
+**[   SUPPORT  ](https://discord.gg/THVennCsDP)** -  [   INVITE   ](https://discord.com/api/oauth2/authorize?client_id=695003635482099823&permissions=2097143539&scope=bot) -  [   WEBSITE   ](coming soon)`)
 
     //delete the Command
   //////  message.delete({timeout: 300})
