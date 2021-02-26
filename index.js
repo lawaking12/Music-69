@@ -91,7 +91,7 @@ client.on(`message`, async (message) => {
     .setColor("RANDOM")
     .setThumbnail(message.author.avatarURL({dynamic: "true"}))
       .setAuthor("Help Commands!","https://cdn.discordapp.com/emojis/775437938142085170.gif?v=1&size=64")
-    .setImage('https://cdn.discordapp.com/attachments/793639750170443787/798756675342303262/image0.gif')
+    .setImage('https://cdn.discordapp.com/attachments/793639750170443787/814722052569170010/image0.gif')
     
     .setTitle("NEW UPDATE IN PLAY🎵")
     .setFooter(`Requested by: ${message.author.username}#${message.author.discriminator}`, message.member.user.displayAvatarURL({ dynamic: true }))
