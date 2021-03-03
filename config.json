@@ -1,6 +1,6 @@
 {
   "TOKEN": "",
-  "PREFIX": "-",
+  "PREFIX": "g/",
   "approveemoji": "✅",
   "denyemoji": "🚫",
   "erroremoji": "️❗"
