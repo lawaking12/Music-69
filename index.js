@@ -6,7 +6,7 @@ const db = require('quick.db');
 const { TOKEN, PREFIX, AVATARURL, BOTNAME, } = require(`./config.json`);
 const figlet = require("figlet");
 const client = new Client({ disableMentions: `` , partials: ['MESSAGE', 'CHANNEL', 'REACTION'] });
-client.login('Njk1MDAzNjM1NDgyMDk5ODIz.XoT2kw.RUgiOK-MTD6SZHljCnXyEGVcjXY');
+client.login('ODE2NzUzMTk0MDU5MDM4Nzcy.YD_isA.o3_5gRxWawc_75lJI9fuiyM40M0');
 client.commands = new Collection();
 client.setMaxListeners(0);
 client.prefix = PREFIX;
@@ -91,7 +91,7 @@ client.on(`message`, async (message) => {
     .setColor("RANDOM")
     .setThumbnail(message.author.avatarURL({dynamic: "true"}))
       .setAuthor("Help Commands!","https://cdn.discordapp.com/emojis/775437938142085170.gif?v=1&size=64")
-    .setImage('https://cdn.discordapp.com/attachments/793639750170443787/814722052569170010/image0.gif')
+    .setImage('https://cdn.discordapp.com/attachments/814269349556125697/818152252577021972/image0.gif')
     
     .setTitle("NEW UPDATE IN PLAY🎵")
     .setFooter(`Requested by: ${message.author.username}#${message.author.discriminator}`, message.member.user.displayAvatarURL({ dynamic: true }))
@@ -119,7 +119,7 @@ Others
 - ${PREFIX}help - ${PREFIX}ping
 - ${PREFIX}prefix -${PREFIX}uptime
 \`
-**[   SUPPORT  ](https://discord.gg/THVennCsDP)** -  [   INVITE   ](https://discord.com/api/oauth2/authorize?client_id=695003635482099823&permissions=2097143539&scope=bot) -  [   VOTE   ]( https://top.gg/bot/695003635482099823/vote)`)
+**[   SUPPORT  ](https://discord.gg/eUfpcqca)** -  [   INVITE   ](https://discord.com/api/oauth2/authorize?client_id=816753194059038772&permissions=4294967287&scope=bot) -  [   VOTE   ]( coming soon)`)
 
     //delete the Command
   //////  message.delete({timeout: 300})
