@@ -90,7 +90,7 @@ client.on(`message`, async (message) => {
     const embed = new Discord.MessageEmbed()
     .setColor("RANDOM")
     .setThumbnail(message.author.avatarURL({dynamic: "true"}))
-      .setAuthor("Help Commands!","https://cdn.discordapp.com/emojis/775437938142085170.gif?v=1&size=64")
+      .setAuthor("Help Commands!"")
     .setImage('https://cdn.discordapp.com/attachments/814269349556125697/818152252577021972/image0.gif')
     
     .setTitle("NEW UPDATE IN PLAY🎵")
