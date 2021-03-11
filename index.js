@@ -119,7 +119,7 @@ Others
 - ${PREFIX}help - ${PREFIX}ping
 - ${PREFIX}prefix -${PREFIX}uptime
 \`
-**[   SUPPORT  ](https://discord.gg/eUfpcqca)** -  [   INVITE   ](https://discord.com/api/oauth2/authorize?client_id=816753194059038772&permissions=4294967287&scope=bot) -  [   VOTE   ]( coming soon)`)
+**[   SUPPORT  ](https://discord.gg/hvjXBFzr)** -  [   INVITE   ](https://discord.com/api/oauth2/authorize?client_id=784304843807391755&permissions=0&scope=bot) -  [   VOTE   ]( coming soon)`)
 
     //delete the Command
   //////  message.delete({timeout: 300})
