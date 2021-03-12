@@ -1,5 +1,3 @@
-**Code Giveaway**
-
 if(command === `${prefix}giveaway`) {
   if (!args[0]) return message.channel.send(`You did not specify your time!`);
   if (!args[0].endsWith("d") && !args[0].endsWith("h") && !args[0].endsWith("m"))
