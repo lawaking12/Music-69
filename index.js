@@ -160,7 +160,7 @@ Others
    command.execute(message, args, client);
  } catch (error) {
    console.error(error);
-   message.reply( new MessageEmbed().setColor("#c219d8")
+   message.reply( new MessageEmbed().setColor("#ff0000")
    .setTitle(`<:no:770326304473350145> There was an error executing that command.`)).catch(console.error);
  }
 
@@ -255,4 +255,4 @@ Locked By : <@${message.author.id}>
 });
 
 
-//Bot coded by Tomato#6966 
+//
