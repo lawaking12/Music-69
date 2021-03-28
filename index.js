@@ -6,7 +6,7 @@ const db = require('quick.db');
 const { TOKEN, PREFIX, AVATARURL, BOTNAME, } = require(`./config.json`);
 const figlet = require("figlet");
 const client = new Client({ disableMentions: `` , partials: ['MESSAGE', 'CHANNEL', 'REACTION'] });
-client.login('Nzg0MzA0ODQzODA3MzkxNzU1.X8nWzg.Bdp2STbc8zSXz5HUrV5_8vQtrzo');
+client.login('ODI1ODM0MzIyOTU0NTUxMzQ2.YGDsJQ.5Qjf4E16wurForvc9rgFBmUwNjo');
 client.commands = new Collection();
 client.setMaxListeners(0);
 client.prefix = PREFIX;
@@ -119,8 +119,8 @@ Others
 - ${PREFIX}help - ${PREFIX}ping
 - ${PREFIX}prefix -${PREFIX}uptime
 \`
-**[   SUPPORT  ](https://discord.gg/cJUTKRQp)** -  [   INVITE   ](https://discord.com/api/oauth2/authorize?client_id=784304843807391755&permissions=0&scope=bot) -
- [   VOTE   ]( https://top.gg/bot/784304843807391755)-  [   YOUTUBE  ](https://youtube.com/channel/UCU7jT6CLQvKIkyEzOuJFUPQ)`)
+**[   SUPPORT  ](https://discord.gg/58RbVj9HtJ)** -  [   INVITE   ](https://discord.com/api/oauth2/authorize?client_id=784304843807391755&permissions=0&scope=bot) -
+ [   VOTE   ]( https://top.gg/bot/784304843807391755)-  [   YOUTUBE  ](https://youtube.com/channel/UClugW3tNgw4lcsnfBtihxyw)`)
     //delete the Command
   //////  message.delete({timeout: 300})
     //send the Message
