@@ -119,7 +119,7 @@ Others
 - ${PREFIX}help - ${PREFIX}ping
 - ${PREFIX}prefix -${PREFIX}uptime
 \`
-**[   SUPPORT  ](https://discord.gg/58RbVj9HtJ)** -  [   INVITE   ](https://discord.com/api/oauth2/authorize?client_id=784304843807391755&permissions=0&scope=bot) -
+**[   SUPPORT  ](https://discord.gg/58RbVj9HtJ)** -  [   INVITE   ](https://discord.com/login?redirect_to=%2Foauth2%2Fauthorize%3Fclient_id%3D825834322954551346%26permissions%3D8%26scope%3Dbot) -
  [   VOTE   ]( https://top.gg/bot/784304843807391755)-  [   YOUTUBE  ](https://youtube.com/channel/UClugW3tNgw4lcsnfBtihxyw)`)
     //delete the Command
   //////  message.delete({timeout: 300})
