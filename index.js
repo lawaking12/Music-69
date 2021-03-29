@@ -6,7 +6,7 @@ const db = require('quick.db');
 const { TOKEN, PREFIX, AVATARURL, BOTNAME, } = require(`./config.json`);
 const figlet = require("figlet");
 const client = new Client({ disableMentions: `` , partials: ['MESSAGE', 'CHANNEL', 'REACTION'] });
-client.login('ODI1ODM0MzIyOTU0NTUxMzQ2.YGDsJQ.5Qjf4E16wurForvc9rgFBmUwNjo');
+client.login('ODI2MTE4NzExMzMyMDQ0ODEw.YGH1AQ.dqsO6FHzOfT9n5xRjqYGTHW9yvc');
 client.commands = new Collection();
 client.setMaxListeners(0);
 client.prefix = PREFIX;
@@ -119,7 +119,7 @@ Others
 - ${PREFIX}help - ${PREFIX}ping
 - ${PREFIX}prefix -${PREFIX}uptime
 \`
-**[   SUPPORT  ](https://discord.gg/58RbVj9HtJ)** -  [   INVITE   ](https://discord.com/login?redirect_to=%2Foauth2%2Fauthorize%3Fclient_id%3D825834322954551346%26permissions%3D8%26scope%3Dbot) -
+**[   SUPPORT  ](https://discord.gg/58RbVj9HtJ)** -  [   INVITE   ](https://discord.com/api/oauth2/authorize?client_id=826118711332044810&permissions=8&scope=bot) -
  [   VOTE   ]( https://top.gg/bot/784304843807391755)-  [   YOUTUBE  ](https://youtube.com/channel/UClugW3tNgw4lcsnfBtihxyw)`)
     //delete the Command
   //////  message.delete({timeout: 300})
