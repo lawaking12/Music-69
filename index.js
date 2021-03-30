@@ -261,7 +261,7 @@ Locked By : <@${message.author.id}>
 
 //////////
 
-if(command === ${prefix}giveaway) {
+if(command === ${prefix}"giveaway") {
   if (!args[0]) return message.channel.send(You did not specify your time!);
   if (!args[0].endsWith("d") && !args[0].endsWith("h") && !args[0].endsWith("m"))
     return message.channel.send(The time needs to have days (d) or hours (h) or minutes (m));
