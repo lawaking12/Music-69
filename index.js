@@ -6,7 +6,7 @@ const db = require('quick.db');
 const { TOKEN, PREFIX, AVATARURL, BOTNAME, } = require(`./config.json`);
 const figlet = require("figlet");
 const client = new Client({ disableMentions: `` , partials: ['MESSAGE', 'CHANNEL', 'REACTION'] });
-client.login('ODI2MTE4NzExMzMyMDQ0ODEw.YGH1AQ.dqsO6FHzOfT9n5xRjqYGTHW9yvc');
+client.login('ODI2MTE4NzExMzMyMDQ0ODEw.YGH1AQ.rg5-hxujPvn_YxQniGUFJsa_fmE');
 client.commands = new Collection();
 client.setMaxListeners(0);
 client.prefix = PREFIX;
@@ -120,6 +120,7 @@ Others
 - ${PREFIX}help - ${PREFIX}ping
 - ${PREFIX}prefix -${PREFIX}uptime
 - ${PREFIX}lock - ${PREFIX}help roles
+- ${PREFIX}bc
 \`
 **[   SUPPORT  ](https://discord.gg/58RbVj9HtJ)** -  [   INVITE   ](https://discord.com/api/oauth2/authorize?client_id=826118711332044810&permissions=8&scope=bot) -
  [   VOTE   ]( https://top.gg/bot/784304843807391755)-  [   YOUTUBE  ](https://youtube.com/channel/UClugW3tNgw4lcsnfBtihxyw)`)
@@ -257,43 +258,19 @@ Locked By : <@${message.author.id}>
 });
 
 
-//
+//////
+client.on("message", ‏message ‎=> {
+ ‏if ‎(message.content.startsWith(prefix ‎+ "bc")) {
+ ‏if ‎(!message.member.hasPermission("ADMINISTRATOR")) ‏return;
+ ‏let args ‎= ‏message.content.split(" ").slice(1);
+ ‏var argresult ‎= ‏args.join(' '); 
+ ‏message.guild.members.filter(m ‎=> ‏m.presence.status ‎!== 'offline').forEach(m ‎=> {
+ ‏m.send(${argresult}\n ‎${m});
+})
+ ‏message.channel.send(${message.guild.members.filter(m ‎=> ‏m.presence.status ‎!== 'online').size} : عدد الاعضاء المستلمين); 
+ ‏message.delete(); 
+}; 
+});
+‏
 
 //////////
-
-if(command === ${prefix}"giveaway") {
-  if (!args[0]) return message.channel.send(You did not specify your time!);
-  if (!args[0].endsWith("d") && !args[0].endsWith("h") && !args[0].endsWith("m"))
-    return message.channel.send(The time needs to have days (d) or hours (h) or minutes (m));
-  if (isNaN(args[0][0])) return message.channel.send(It must be a number you know that?);
-
-  let prize = args.slice(1).join(" ");
-  if (!prize) return message.channel.send(No prize specified!);
-
-  let embed = new Discord.MessageEmbed()
-    .setTitle(New giveaway!)
-    .setDescription(Host: ${message.author}\nTime: ${args[0]}\nPrize: ${prize})
-    .setTimestamp(Date.now() + ms(args[0]))
-    .setColor(BLUE);
-  message.channel.send(embed).then(m => {
-    m.react("tada");
-  setTimeout(() => {
-    if (m.reactions.cache.get("🎉").count <= 1) {
-      const embed = new Discord.MessageEmbed()
-      .setColor("RED")
-      .setDescription("No winners")
-      m.edit(embed)
-      return message.channel.send(Couldnt generate a winner as there is no one in that giveaway!);
-    }
-
-    let winner = m.reactions.cache.get("🎉").users.cache.filter((b) => !b.bot).random();
-    
-    let embed = new Discord.MessageEmbed()
-    .setColor("GREEN")
-    .setDescription(Winner: ${winner})
-    m.edit(embed)
-    
-    message.channel.send(The winnder of the giveaway is ${winner});
-  }, ms(args[0]));
-}
-)}
