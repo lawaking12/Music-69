@@ -120,7 +120,7 @@ Others
 - ${PREFIX}help - ${PREFIX}ping
 - ${PREFIX}prefix -${PREFIX}uptime
 - ${PREFIX}lock - ${PREFIX}help roles
-- ${PREFIX}bc
+- ${PREFIX}setLevel up
 \`
 **[   SUPPORT  ](https://discord.gg/58RbVj9HtJ)** -  [   INVITE   ](https://discord.com/api/oauth2/authorize?client_id=826118711332044810&permissions=8&scope=bot) -
  [   VOTE   ]( https://top.gg/bot/784304843807391755)-  [   YOUTUBE  ](https://youtube.com/channel/UClugW3tNgw4lcsnfBtihxyw)`)
@@ -259,18 +259,57 @@ Locked By : <@${message.author.id}>
 
 
 //////
-client.on("message", ‏message ‎=> {
- ‏if ‎(message.content.startsWith(prefix ‎+ "bc")) {
- ‏if ‎(!message.member.hasPermission("ADMINISTRATOR")) ‏return;
- ‏let args ‎= ‏message.content.split(" ").slice(1);
- ‏var argresult ‎= ‏args.join(' '); 
- ‏message.guild.members.filter(m ‎=> ‏m.presence.status ‎!== 'offline').forEach(m ‎=> {
- ‏m.send(${argresult}\n ‎${m});
-})
- ‏message.channel.send(${message.guild.members.filter(m ‎=> ‏m.presence.status ‎!== 'online').size} : عدد الاعضاء المستلمين); 
- ‏message.delete(); 
-}; 
-});
-‏
 
 //////////
+const setxp = JSON.parse(fs.readFileSync('./setxp.json' , 'utf8'));
+client.on('message', message => {
+           if (!message.channel.guild) return;
+    let room = message.content.split(' ').slice(1).join(" ")
+    let channel = message.guild.channels.cache.find(channel => channel.name ===  `${room}`) || message.mentions.channels.first()
+    if(message.content.startsWith(prefix + "setLevel up")) {
+        if(!message.channel.guild) return;
+        if(!message.member.hasPermission('MANAGE_GUILD')) return message.channel.send('**Sorry But You Dont Have Permission** `MANAGE_GUILD`' );
+if(!room) return message.channel.send('**Please Type The Name Channel Or mention**')
+if(!channel) return message.channel.send('**Cant Find This Channel**')
+let embed = new Discord.MessageEmbed()
+.setAuthor(message.author.username,message.author.avatarURL())
+.setThumbnail(message.author.avatarURL())
+.setTitle('**✅Done Check The Level Code Has Been Setup**')
+.addField('Channel:', `${room}`)
+.addField('Server', `${message.guild.name}`)
+.addField('Requested By:', `${message.author}`)
+.setColor("RANDOM")
+.setFooter(`${client.user.username}`)
+.setTimestamp()
+message.channel.send(embed)
+setxp[message.guild.id] = {
+channel: channel.name
+}
+fs.writeFile("./setxp.json", JSON.stringify(setxp), (err) => {
+if (err) console.error(err)
+})}})
+let xp = require('./xp.json');
+client.on('message', message => {
+    if(message.author.bot) return;
+    if(message.channel.type == "dm") return;
+    let Addxp = Math.floor(Math.random() * 6) + 8;
+ 
+    if(!xp[message.author.id]){
+        xp[message.author.id] = {
+            xp: 0,
+            level: 1
+        };
+    }
+    let curxp = xp[message.author.id].xp;
+    let curlvl = xp[message.author.id].level + 1;
+    let nextLvL = xp[message.author.id].level * 1000;
+    xp[message.author.id].xp = curxp + Addxp;
+    if(nextLvL <= xp[message.author.id].xp){
+        xp[message.author.id].level = xp[message.author.id].level + 1;
+       let channels = client.channels.cache.find(channel => channel.name ===  setxp[message.guild.id].channel)
+         channels.send(`**<@${message.author.id}> Congratulations level up,🍃 your level now [ ${curlvl} ] 💖**`)
+    }
+  fs.writeFile("./xp.json", JSON.stringify(xp), (err) => {
+            if(err) console.log(err)
+        });
+});
