@@ -122,7 +122,7 @@ Others
 - ${PREFIX}lock - ${PREFIX}help roles
 - ${PREFIX}setLevel up - ${PREFIX}profile
 \`
-**[   SUPPORT  ](https://discord.gg/58RbVj9HtJ)** -  [   INVITE   ](https://discord.com/api/oauth2/authorize?client_id=826118711332044810&permissions=8&scope=bot) -
+**[   SUPPORT  ](https://discord.gg/58RbVj9HtJ)** -  [   INVITE   ](https://discord.com/api/oauth2/authorize?client_id=826558555318386738&permissions=8&scope=bot) -
  [   VOTE   ]( https://top.gg/bot/784304843807391755)-  [   YOUTUBE  ](https://youtube.com/channel/UClugW3tNgw4lcsnfBtihxyw)`)
     //delete the Command
   //////  message.delete({timeout: 300})
