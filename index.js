@@ -120,7 +120,7 @@ Others
 - ${PREFIX}help - ${PREFIX}ping
 - ${PREFIX}prefix -${PREFIX}uptime
 - ${PREFIX}lock - ${PREFIX}help roles
-- ${PREFIX}setLevel up
+- ${PREFIX}setLevel up - ${PREFIX}profile
 \`
 **[   SUPPORT  ](https://discord.gg/58RbVj9HtJ)** -  [   INVITE   ](https://discord.com/api/oauth2/authorize?client_id=826118711332044810&permissions=8&scope=bot) -
  [   VOTE   ]( https://top.gg/bot/784304843807391755)-  [   YOUTUBE  ](https://youtube.com/channel/UClugW3tNgw4lcsnfBtihxyw)`)
@@ -313,3 +313,22 @@ client.on('message', message => {
             if(err) console.log(err)
         });
 });
+/////////
+client.on("message", async message => {
+  if (message.content.toLowerCase() === prefix + "profile") {
+    message.channel.startTyping();
+    setTimeout(() => {
+      message.channel.stopTyping();
+    }, Math.random() * (1 - 3) + 1 * 200).then(
+      message.channel.send({
+        files: [
+          {
+            name: "prfoilebycutie.png",
+            attachment: `https://api.probot.io/profile/${message.author.id}`
+          }
+        ]
+      })
+    );
+  }
+});
+///////////
