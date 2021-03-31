@@ -96,9 +96,9 @@ client.on(`message`, async (message) => {
     .setTitle("NEW UPDATE IN PLAY🎵")
     .setFooter(`Requested by: ${message.author.username}#${message.author.discriminator}`, message.member.user.displayAvatarURL({ dynamic: true }))
 
-    .setDescription(`\`≪  Prefix Bot ${PREFIX}  ≫
+    .setDescription(`\`≪  Prefix Bot ${PREFIX} <a:setting:813404135181385759> ≫
 
-Filter Commands
+Filter Commands <a:setting:813404135181385759>
 - ${PREFIX}fi bassboost - ${PREFIX}fi 8D
 - ${PREFIX}fi vaporwave - ${PREFIX}fi nightcore 
 - ${PREFIX}fi phaser    - ${PREFIX}fi tremolo 
@@ -106,7 +106,7 @@ Filter Commands
 - ${PREFIX}fi pulsator 
 - ${PREFIX}fi clear --- removes all filters
 
-Music
+Music <a:Voulome:813460704031145986>
 - ${PREFIX}loop(l)-${PREFIX}lyrics(ly)
 - ${PREFIX}np(current)-${PREFIX}pause(pe)
 - ${PREFIX}-play(p)-${PREFIX}queue(qu)
@@ -116,7 +116,7 @@ Music
 - ${PREFIX}skipto(st)-${PREFIX}stop(sp)
 - ${PREFIX}volume(v)
 
-Others
+Others <a:Erore:813505315534405632>
 - ${PREFIX}help - ${PREFIX}ping
 - ${PREFIX}prefix -${PREFIX}uptime
 - ${PREFIX}lock - ${PREFIX}help roles
