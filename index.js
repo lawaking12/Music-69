@@ -96,9 +96,9 @@ client.on(`message`, async (message) => {
     .setTitle("NEW UPDATE IN PLAY🎵")
     .setFooter(`Requested by: ${message.author.username}#${message.author.discriminator}`, message.member.user.displayAvatarURL({ dynamic: true }))
 
-    .setDescription(`\`≪  Prefix Bot ${PREFIX} <a:setting:813404135181385759> ≫
+    .setDescription(`\`≪  Prefix Bot ${PREFIX} <a:emoji_9:827899383981801512> ≫
 
-Filter Commands 🔎
+Filter Commands <a:emoji_3:827087950469791754>
 - ${PREFIX}fi bassboost - ${PREFIX}fi 8D
 - ${PREFIX}fi vaporwave - ${PREFIX}fi nightcore 
 - ${PREFIX}fi phaser    - ${PREFIX}fi tremolo 
@@ -106,7 +106,7 @@ Filter Commands 🔎
 - ${PREFIX}fi pulsator 
 - ${PREFIX}fi clear --- removes all filters
 
-Music 🎵
+Music <a:emoji_10:828236615029620766>
 - ${PREFIX}loop(l)-${PREFIX}lyrics(ly)
 - ${PREFIX}np(current)-${PREFIX}pause(pe)
 - ${PREFIX}-play(p)-${PREFIX}queue(qu)
@@ -116,12 +116,12 @@ Music 🎵
 - ${PREFIX}skipto(st)-${PREFIX}stop(sp)
 - ${PREFIX}volume(v)
 
-Others ⚠️
+Others <a:emoji_4:827087972717166642>
 - ${PREFIX}help - ${PREFIX}ping
 - ${PREFIX}prefix -${PREFIX}uptime
 - ${PREFIX}lock - ${PREFIX}help roles
-- ${PREFIX}profile - ${PREFIX}about
 \`
+Links <a:emoji_6:827091544556568579>
 **[   SUPPORT  ](https://discord.gg/58RbVj9HtJ)** -  [   INVITE   ](https://discord.com/api/oauth2/authorize?client_id=828237426744623174&permissions=8&scope=bot) -
  [   VOTE   ]( https://top.gg/bot/784304843807391755)-  [   YOUTUBE  ](https://youtube.com/channel/UClugW3tNgw4lcsnfBtihxyw)`)
     //delete the Command
