@@ -120,7 +120,7 @@ Others ⚠️
 - ${PREFIX}help - ${PREFIX}ping
 - ${PREFIX}prefix -${PREFIX}uptime
 - ${PREFIX}lock - ${PREFIX}help roles
-- ${PREFIX}profile
+- ${PREFIX}profile - ${PREFIX}about
 \`
 **[   SUPPORT  ](https://discord.gg/58RbVj9HtJ)** -  [   INVITE   ](https://discord.com/api/oauth2/authorize?client_id=828237426744623174&permissions=8&scope=bot) -
  [   VOTE   ]( https://top.gg/bot/784304843807391755)-  [   YOUTUBE  ](https://youtube.com/channel/UClugW3tNgw4lcsnfBtihxyw)`)
