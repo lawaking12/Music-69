@@ -98,7 +98,7 @@ client.on(`message`, async (message) => {
 
     .setDescription(`\`≪  Prefix Bot ${PREFIX} <a:setting:813404135181385759> ≫
 
-Filter Commands <a:emoji_3:827087950469791754>
+Filter Commands 🔎
 - ${PREFIX}fi bassboost - ${PREFIX}fi 8D
 - ${PREFIX}fi vaporwave - ${PREFIX}fi nightcore 
 - ${PREFIX}fi phaser    - ${PREFIX}fi tremolo 
@@ -106,7 +106,7 @@ Filter Commands <a:emoji_3:827087950469791754>
 - ${PREFIX}fi pulsator 
 - ${PREFIX}fi clear --- removes all filters
 
-Music <a:emoji_10:828236615029620766>
+Music 🎵
 - ${PREFIX}loop(l)-${PREFIX}lyrics(ly)
 - ${PREFIX}np(current)-${PREFIX}pause(pe)
 - ${PREFIX}-play(p)-${PREFIX}queue(qu)
@@ -116,13 +116,13 @@ Music <a:emoji_10:828236615029620766>
 - ${PREFIX}skipto(st)-${PREFIX}stop(sp)
 - ${PREFIX}volume(v)
 
-Others <a:emoji_4:827087972717166642>
+Others ⚠️
 - ${PREFIX}help - ${PREFIX}ping
 - ${PREFIX}prefix -${PREFIX}uptime
 - ${PREFIX}lock - ${PREFIX}help roles
 - ${PREFIX}profile
 \`
-**[   SUPPORT  ](https://discord.gg/58RbVj9HtJ)** -  [   INVITE   ](https://discord.com/api/oauth2/authorize?client_id=826558555318386738&permissions=8&scope=bot) -
+**[   SUPPORT  ](https://discord.gg/58RbVj9HtJ)** -  [   INVITE   ](https://discord.com/api/oauth2/authorize?client_id=828237426744623174&permissions=8&scope=bot) -
  [   VOTE   ]( https://top.gg/bot/784304843807391755)-  [   YOUTUBE  ](https://youtube.com/channel/UClugW3tNgw4lcsnfBtihxyw)`)
     //delete the Command
   //////  message.delete({timeout: 300})
