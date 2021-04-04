@@ -98,7 +98,7 @@ client.on(`message`, async (message) => {
 
     .setDescription(`\`≪  Prefix Bot ${PREFIX} <a:setting:813404135181385759> ≫
 
-Filter Commands <a:setting:813404135181385759>
+Filter Commands <a:emoji_3:827087950469791754>
 - ${PREFIX}fi bassboost - ${PREFIX}fi 8D
 - ${PREFIX}fi vaporwave - ${PREFIX}fi nightcore 
 - ${PREFIX}fi phaser    - ${PREFIX}fi tremolo 
@@ -106,7 +106,7 @@ Filter Commands <a:setting:813404135181385759>
 - ${PREFIX}fi pulsator 
 - ${PREFIX}fi clear --- removes all filters
 
-Music <a:Voulome:813460704031145986>
+Music <a:emoji_10:828236615029620766>
 - ${PREFIX}loop(l)-${PREFIX}lyrics(ly)
 - ${PREFIX}np(current)-${PREFIX}pause(pe)
 - ${PREFIX}-play(p)-${PREFIX}queue(qu)
@@ -116,11 +116,11 @@ Music <a:Voulome:813460704031145986>
 - ${PREFIX}skipto(st)-${PREFIX}stop(sp)
 - ${PREFIX}volume(v)
 
-Others <a:Erore:813505315534405632>
+Others <a:emoji_4:827087972717166642>
 - ${PREFIX}help - ${PREFIX}ping
 - ${PREFIX}prefix -${PREFIX}uptime
 - ${PREFIX}lock - ${PREFIX}help roles
-- ${PREFIX}setLevel up - ${PREFIX}profile
+- ${PREFIX}profile
 \`
 **[   SUPPORT  ](https://discord.gg/58RbVj9HtJ)** -  [   INVITE   ](https://discord.com/api/oauth2/authorize?client_id=826558555318386738&permissions=8&scope=bot) -
  [   VOTE   ]( https://top.gg/bot/784304843807391755)-  [   YOUTUBE  ](https://youtube.com/channel/UClugW3tNgw4lcsnfBtihxyw)`)
@@ -261,59 +261,7 @@ Locked By : <@${message.author.id}>
 //////
 
 //////////
-const setxp = JSON.parse(fs.readFileSync('./setxp.json' , 'utf8'));
-client.on('message', message => {
-           if (!message.channel.guild) return;
-    let room = message.content.split(' ').slice(1).join(" ")
-    let channel = message.guild.channels.cache.find(channel => channel.name ===  `${room}`) || message.mentions.channels.first()
-    if(message.content.startsWith(prefix + "setLevel up")) {
-        if(!message.channel.guild) return;
-        if(!message.member.hasPermission('MANAGE_GUILD')) return message.channel.send('**Sorry But You Dont Have Permission** `MANAGE_GUILD`' );
-if(!room) return message.channel.send('**Please Type The Name Channel Or mention**')
-if(!channel) return message.channel.send('**Cant Find This Channel**')
-let embed = new Discord.MessageEmbed()
-.setAuthor(message.author.username,message.author.avatarURL())
-.setThumbnail(message.author.avatarURL())
-.setTitle('**✅Done Check The Level Code Has Been Setup**')
-.addField('Channel:', `${room}`)
-.addField('Server', `${message.guild.name}`)
-.addField('Requested By:', `${message.author}`)
-.setColor("RANDOM")
-.setFooter(`${client.user.username}`)
-.setTimestamp()
-message.channel.send(embed)
-setxp[message.guild.id] = {
-channel: channel.name
-}
-fs.writeFile("./setxp.json", JSON.stringify(setxp), (err) => {
-if (err) console.error(err)
-})}})
-let xp = require('./xp.json');
-client.on('message', message => {
-    if(message.author.bot) return;
-    if(message.channel.type == "dm") return;
-    let Addxp = Math.floor(Math.random() * 6) + 8;
- 
-    if(!xp[message.author.id]){
-        xp[message.author.id] = {
-            xp: 0,
-            level: 1
-        };
-    }
-    let curxp = xp[message.author.id].xp;
-    let curlvl = xp[message.author.id].level + 1;
-    let nextLvL = xp[message.author.id].level * 1000;
-    xp[message.author.id].xp = curxp + Addxp;
-    if(nextLvL <= xp[message.author.id].xp){
-        xp[message.author.id].level = xp[message.author.id].level + 1;
-       let channels = client.channels.cache.find(channel => channel.name ===  setxp[message.guild.id].channel)
-         channels.send(`**<@${message.author.id}> Congratulations level up,🍃 your level now [ ${curlvl} ] 💖**`)
-    }
-  fs.writeFile("./xp.json", JSON.stringify(xp), (err) => {
-            if(err) console.log(err)
-        });
-});
-/////////
+
 client.on("message", async message => {
   if (message.content.toLowerCase() === prefix + "profile") {
     message.channel.startTyping();
