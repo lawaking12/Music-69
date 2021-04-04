@@ -97,7 +97,7 @@ client.on(`message`, async (message) => {
     .setFooter(`Requested by: ${message.author.username}#${message.author.discriminator}`, message.member.user.displayAvatarURL({ dynamic: true }))
 
     .setDescription(`\`≪  Prefix Bot ${PREFIX} ≫
-
+\`
 Filter Commands <a:emoji_4:827087972717166642>
 - ${PREFIX}fi bassboost - ${PREFIX}fi 8D
 - ${PREFIX}fi vaporwave - ${PREFIX}fi nightcore 
