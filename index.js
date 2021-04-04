@@ -98,7 +98,7 @@ client.on(`message`, async (message) => {
 
     .setDescription(`\`≪  Prefix Bot ${PREFIX} ≫
 
-Filter Commnads <a:emoji_4:827087972717166642>
+Filter Commands <a:emoji_4:827087972717166642>
 - ${PREFIX}fi bassboost - ${PREFIX}fi 8D
 - ${PREFIX}fi vaporwave - ${PREFIX}fi nightcore 
 - ${PREFIX}fi phaser    - ${PREFIX}fi tremolo 
@@ -116,7 +116,7 @@ Music <a:emoji_10:828236615029620766>
 - ${PREFIX}skipto(st)-${PREFIX}stop(sp)
 - ${PREFIX}volume(v)
 \`
-** Others ** <a:emoji_3:827087950469791754>
+Others <a:emoji_5:827087995592507393>
 - ${PREFIX}help - ${PREFIX}ping
 - ${PREFIX}prefix -${PREFIX}uptime
 - ${PREFIX}lock - ${PREFIX}help roles
