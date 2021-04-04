@@ -86,7 +86,7 @@ client.on(`message`, async (message) => {
     //define saymsg
     const saymsg = message.content.slice(Number(prefix.length) + 5)
     //define embed
-     message.react("✅");
+     message.react("<a:emoji_9:827899383981801512>");
     const embed = new Discord.MessageEmbed()
     .setColor("RANDOM")
     .setThumbnail(message.author.avatarURL({dynamic: "true"}))
@@ -96,9 +96,9 @@ client.on(`message`, async (message) => {
     .setTitle("NEW UPDATE IN PLAY🎵")
     .setFooter(`Requested by: ${message.author.username}#${message.author.discriminator}`, message.member.user.displayAvatarURL({ dynamic: true }))
 
-    .setDescription(`\`≪  Prefix Bot ${PREFIX} <a:emoji_9:827899383981801512> ≫
+    .setDescription(`\`≪  Prefix Bot ${PREFIX} ≫
 
-Filter Commands <a:emoji_3:827087950469791754>
+Filter Commands 🔎
 - ${PREFIX}fi bassboost - ${PREFIX}fi 8D
 - ${PREFIX}fi vaporwave - ${PREFIX}fi nightcore 
 - ${PREFIX}fi phaser    - ${PREFIX}fi tremolo 
@@ -106,7 +106,7 @@ Filter Commands <a:emoji_3:827087950469791754>
 - ${PREFIX}fi pulsator 
 - ${PREFIX}fi clear --- removes all filters
 
-Music <a:emoji_10:828236615029620766>
+Music 🎶
 - ${PREFIX}loop(l)-${PREFIX}lyrics(ly)
 - ${PREFIX}np(current)-${PREFIX}pause(pe)
 - ${PREFIX}-play(p)-${PREFIX}queue(qu)
@@ -116,7 +116,7 @@ Music <a:emoji_10:828236615029620766>
 - ${PREFIX}skipto(st)-${PREFIX}stop(sp)
 - ${PREFIX}volume(v)
 
-Others <a:emoji_4:827087972717166642>
+Others 🛡
 - ${PREFIX}help - ${PREFIX}ping
 - ${PREFIX}prefix -${PREFIX}uptime
 - ${PREFIX}lock - ${PREFIX}help roles
