@@ -120,6 +120,7 @@ Others 🛡
 - ${PREFIX}help - ${PREFIX}ping
 - ${PREFIX}prefix -${PREFIX}uptime
 - ${PREFIX}lock - ${PREFIX}help roles
+- ${PREFIX}avatar
 \`
 ** Links ** <a:emoji_6:827091544556568579>
 **[   SUPPORT  ](https://discord.gg/58RbVj9HtJ)** -  [   INVITE   ](https://discord.com/api/oauth2/authorize?client_id=828237426744623174&permissions=8&scope=bot) -
